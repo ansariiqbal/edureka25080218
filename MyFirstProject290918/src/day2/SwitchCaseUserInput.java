@@ -1,10 +1,17 @@
 package day2;
 
-public class SwitchCaseStatement {
+import java.util.Scanner;
+
+public class SwitchCaseUserInput {
 
 	public static void main(String[] args) {
 
-		int numberOfday = 4;
+		int numberOfday;
+
+		System.out.println("Enter number 1 to 7:");
+		Scanner sc = new Scanner(System.in);
+		
+		numberOfday = sc.nextInt();
 
 		switch (numberOfday) {
 		case 1:
@@ -33,6 +40,8 @@ public class SwitchCaseStatement {
 			System.err.println("Invalid Day");
 			break;
 		}
+		
+		sc.close();
 	}
 
 }

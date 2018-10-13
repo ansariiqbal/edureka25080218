@@ -15,11 +15,12 @@ public class Employee {
 	
 	int calculateSalary2() {
 		
-		totalSalary = salary + bonus;		
-
+		totalSalary = salary + bonus;
+		
 		return totalSalary;
+		
 	}
-	
+       
 	
 
 }

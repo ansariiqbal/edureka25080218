@@ -7,7 +7,8 @@ public class DemoEmployee {
 		// 1. Declaring an object
 		Employee saurabh;
 		
-		// 2. Instantiating ("new" word will create memory locations) and 3. Initializing the object
+		// 2. Instantiating ("new" word will allocate/create memory locations) 
+		// 3. Initializing the object by calling "constructor" Employee()
 		saurabh = new Employee();
 		
 		saurabh.salary = 90000;
@@ -24,8 +25,8 @@ public class DemoEmployee {
 		sapna.bonus = 25000;
 		
 		int totalSalary = sapna.calculateSalary2();
-				
-				System.out.println("Total Salary : "+ totalSalary);
+		
+		System.out.println("Total Salary : "+ totalSalary);		
 		
 	}
 
