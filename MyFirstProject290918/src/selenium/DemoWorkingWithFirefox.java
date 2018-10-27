@@ -1,5 +1,7 @@
 package selenium;
 
+import org.apache.xerces.util.SynchronizedSymbolTable;
+
 public class DemoWorkingWithFirefox {
 
 	public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class DemoWorkingWithFirefox {
 		we.invokeBrowser();
 		
 		System.out.println("before get Title");
-		we.getPageTitle();
+		System.out.println(we.getPageTitle());
 		System.out.println("after get Title");
 		
 		

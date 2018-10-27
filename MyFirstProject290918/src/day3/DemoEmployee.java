@@ -4,7 +4,7 @@ public class DemoEmployee {
 
 	public static void main(String[] args) {
 
-		Employee sapna = new Employee(); // we are calling constructor method Employee()
+		Employee sapna = new Employee(); // we are calling constructor class Employee()
 		// class name sapna = new constructor()
 		
 		sapna.salary = 90000; // defined under Employee class - class level
@@ -18,10 +18,10 @@ public class DemoEmployee {
 		
 		Employee Sagar = new Employee();
 		
-		Sagar.calculateSalary();
+		Sagar.calculateSalary(); //values not defined here, but in constructor class
 		System.out.println("-----------------------------");
 		
-		Employee Banu = new Employee(40000, 5000);
+		Employee Banu = new Employee(40000, 5000); // values defined here
 		
 		Banu.calculateSalary();
 	}
