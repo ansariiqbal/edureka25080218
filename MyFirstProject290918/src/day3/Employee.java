@@ -4,6 +4,7 @@ public class Employee { // this is just a class and not main so cannot run/execu
 	
 	int salary; // declaring at class level
 	int bonus; // declaring at class level
+	String name;
 	
 	
 	int totalSalary;
@@ -13,6 +14,7 @@ public class Employee { // this is just a class and not main so cannot run/execu
 		System.out.println("This is a constructor");
 		salary = 8000;
 		bonus = 2000;
+		name = "Sagar";
 		
 	} 
 
@@ -21,13 +23,14 @@ public class Employee { // this is just a class and not main so cannot run/execu
 		System.out.println("Method Overloading - constructor");
 		this.salary = salary;
 		this.bonus = bonus;
+		name = "Banu";
 		
 	}
 
 	void calculateSalary() {
 		System.out.println("This is a main calculateSalary");	
 		totalSalary = salary + bonus; 	
-		System.out.println("Total salary is : "+ totalSalary);
+		System.out.println("Total salary of " + name + " " + totalSalary);
 	}
 	
 	int calculateSalary2() {

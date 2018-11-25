@@ -1,4 +1,4 @@
-package selenium;
+package day6;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,17 +8,33 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class WorkingWithEdge {
+public class MultipleBrowser {
 
 WebDriver driver; 
 	
-	void invokeBrowser() { 
+	void invokeBrowser(String browserType) { // create method
 		
-		driver = new EdgeDriver(); // initializing Edge
-		System.out.println("initilize edge");
+		if(browserType.equals("firefox")) {
+			
+		System.setProperty("webdriver.gecko.driver", "//Mac/Home/Documents/Selenium/WebDrivers/geckodriver.exe");
+		driver = new FirefoxDriver(); // initializing FirefoxDriver
+		}
+		
+		if(browserType.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "//Mac/Home/Documents/Selenium/WebDrivers/chromedriver.exe");
+			driver = new ChromeDriver();	
+		}
+		
+		if(browserType.equals("edge")) {
+			
+			driver = new EdgeDriver();	
+		}
+		
+		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies(); // does not delete, but bypass Cookies
-		driver.get("http://qatechhub.com");	
+		driver.get("http://qatechhub.com");
+
 }
 	
 	
